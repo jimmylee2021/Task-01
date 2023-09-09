@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>STAGE ONE TASK</title>
+</head>
+<body>
+    <div class="container">
+         <div class="box">
+             <h1>UserName:</h1>
+             <h1 class="name" data-testid="slackUserName">Peter Adejimi</h1>
+            <div class="img-bx">
+                <div class="img-container">
+                    <img src="img/peter.jpg" alt="@Peter Adejimi" data-testid="slackDisplayImage">
+                </div>
+            </div>
+            <div class="date">
+                 
+                <p data-testid="currentDayOfTheWeek" id="date"> </p>
+                <p data-testid="currentUTCTime" id="time"></p>
+            </div>
+            <p data-testid="myTrack" class="track">Track : Frontend</p>
+
+            <a href="https://github.com/jimmylee2021/HNG-task-1.git" data-testid="githubURL" class="link">GitHub</a>
+         </div>
+    </div>
+</body>
+
+<script>
+     let time = document.getElementById("time")
+     let date = document.getElementById("date")
+
+
+     const weekday = ["Sunday", "Monday", "Tuesday","Wednesday", "Thursday", "Friday", "Saturday"]
+     const d = new Date()
+     let day = weekday[d.getUTCDay()]
+
+     date.innerHTML += `CurrentUTCDay: ${day}`
+     setInterval(function(){
+         const d = new Date()
+        let ms = d.getUTCMilliseconds();
+     time.innerHTML = `currentUTCTime: ${ms}`
+     }, 1000)
+</script>
+</html>

@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #222;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.box {
+    width: 300px;
+    padding: 20px;
+    background: #ffff;
+    text-align: center;
+}
+.img-bx {
+    display: flex;
+    justify-content: center;
+}
+.img-bx img {
+    width: 100%;
+}
+.date-time {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+p {
+    margin-top: 10px;
+}
+#date,
+#time {
+    font-size: 20px;
+}
+.track {
+    font-size: 20px;
+    margin-top: 20px;
+}
+.link {
+    background: #222;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 45px;
+    margin-top: 10px;
+}
