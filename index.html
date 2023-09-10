@@ -37,10 +37,13 @@
      let day = weekday[d.getUTCDay()]
 
      date.innerHTML += `CurrentUTCDay: ${day}`
-     setInterval(function(){
-         const d = new Date()
-        let ms = d.getUTCMilliseconds();
-     time.innerHTML = `currentUTCTime: ${ms}`
-     }, 1000)
+
+     const displayUTCTime = () => {
+    const currentTime = new Date().getTime();
+    time.textContent = ` ${currentTime}`;
+}
+
+displayUTCTime();
+setInterval(displayUTCTime, 1000);
 </script>
 </html>
